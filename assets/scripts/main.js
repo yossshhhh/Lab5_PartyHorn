@@ -1,7 +1,5 @@
 // main.js
 
-let volNum = document.getElementById("volume-number");
-let volSlider = document.getElementById("volume-slider");
 let volImg = document.getElementById("volume-image");
 let sound = document.getElementById("horn-sound");
 
