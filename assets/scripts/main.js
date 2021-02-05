@@ -48,7 +48,7 @@ function updateSlider(evt) { //update volume and slider based on input
   let vol = evt.target.value;
   if (vol < 0) {
     vol = 0;
-  }
+  } 
   else if (vol > 100)
     vol = 100; //adjust in case greater than 100
   }
