@@ -90,11 +90,8 @@ function toggleSound(evt) {
   }
 }
 
-var submit = document.getElementById("party-horn-form");
-play.addEventListener("submit", playSound);
-
-function playSound(evt) {
+button.addEventListener("click", function(evt) {
   evt.preventDefault();
   sound.play();
 }
-
+  
