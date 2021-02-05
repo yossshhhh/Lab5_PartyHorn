@@ -1,9 +1,27 @@
 // main.js
 
-let volImg = document.getElementById("volume-image");
-let sound = document.getElementById("horn-sound");
+var volImg = document.getElementById("volume-image");
+var sound = document.getElementById("horn-sound");
+var soundImg = document.getElementById("sound-image");
 
-function updateImage(vol) {
+//update images based on currently selected sound
+document.getElementById("radio-air-horn").addEventListener("click", function() {
+  soundImg.setArrribute("src", "./assets/media/images/air-horn.svg");
+})
+
+document.getElementById("radio-car-horn").addEventListener("click", function() {
+  soundImg.setAttribute("src", "./assets/media/images/car.svg");
+})
+
+document.getElementById("radio-party-horn").addEventListener("click", function() {
+  soundImg.setAttribute("src", "./assets/media/images/party-horn.svg");
+})
+
+
+function updateImageAndVol(vol) {
+  if(vol < 0) {
+    vol = 0;
+  }
   vol = vol % 100; //adjust in case input is greater than 100
   sound.volume = vol/100; //set volume percent of 100
   
@@ -21,7 +39,23 @@ function updateImage(vol) {
   }
 }
 
+var volNum = document.getElementById("volume-number");
+var volSlider = document.getElementById("volume-slider");
+
+function updateSlider(evt) { //update volume and slider based on input
+  let vol = evt.target.value;
+  if (vol < 0) {
+    vol = 0;
+  }
+  else {
+  vol = vol % 100; //adjust in case greater than 100
+  }
+  volNum.value = vol;
+  volSlider = vol;
+  updateImageAndVol(vol);
+}
+
+
   
   
-    
   
