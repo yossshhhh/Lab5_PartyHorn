@@ -81,11 +81,11 @@ button.addEventListener("click", function(evt) {
     sound.play();
   }
   else if(carHornSound.checked) {
-    sound.src = "./assets/media/audio/air-horn.mp3";
+    sound.src = "./assets/media/audio/car-horn.mp3";
     sound.play();
   }
   else if(partyHornSound.checked) {
-    sound.src = "./assets/media/audio/air-horn.mp3";
+    sound.src = "./assets/media/audio/party-horn.mp3";
     sound.play();
   } 
 })
