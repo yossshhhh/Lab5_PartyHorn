@@ -1,7 +1,5 @@
 // main.js
 
-var volImg = document.getElementById("volume-image");
-var sound = document.getElementById("horn-sound");
 var soundImg = document.getElementById("sound-image");
 
 //update images based on currently selected sound
@@ -18,6 +16,9 @@ document.getElementById("radio-party-horn").addEventListener("click", function()
 })
 
 
+var volImg = document.getElementById("volume-image");
+var sound = document.getElementById("horn-sound");
+
 function updateImageAndVol(vol) {
   if(vol < 0) {
     vol = 0;
@@ -25,7 +26,6 @@ function updateImageAndVol(vol) {
   if(vol > 100) {
     vol = 100;
   }
-  sound.volume = vol/100; //set volume percent of 100
   
   if(vol > 66) { //67-100
     volImg.src = "./assets/media/icons/volume-level-3.svg";
@@ -39,7 +39,10 @@ function updateImageAndVol(vol) {
   else { //0
     volImg.src = "./assets/media/icons/volume-level-0-.src";
   }
+  
+  sound.volume = vol/100; //set volume percent of 100
 }
+
 
 var volNum = document.getElementById("volume-number");
 var volSlider = document.getElementById("volume-slider");
@@ -56,6 +59,7 @@ function updateSlider(evt) { //update volume and slider based on input
   volSlider = vol;
   updateImageAndVol(vol);
 }
+
 
 
   
