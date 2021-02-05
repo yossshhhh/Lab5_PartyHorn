@@ -2,7 +2,7 @@
 
 //update images based on currently selected sound
 document.getElementById("radio-air-horn").addEventListener("click", function() {
-  document.getElementById("sound-image").setArrribute("src", "./assets/media/images/air-horn.svg");
+  document.getElementById("sound-image").setAttribute("src", "./assets/media/images/air-horn.svg");
 })
 
 document.getElementById("radio-car-horn").addEventListener("click", function() {
