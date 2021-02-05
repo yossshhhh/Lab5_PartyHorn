@@ -43,7 +43,7 @@ volNum.addEventListener("change", function() {
     button.disabled = false;
   }
   else { //0
-    volImg.src = "./assets/media/icons/volume-level-0-.svg";
+    volImg.src = "./assets/media/icons/volume-level-0.svg";
     button.disabled = true; 
   }
   sound.volume = vol/100; //set volume percent of 100
@@ -66,7 +66,7 @@ volSlider.addEventListener("change", function() {
     button.disabled = false;
   }
   else { //0
-    volImg.src = "./assets/media/icons/volume-level-0-.svg";
+    volImg.src = "./assets/media/icons/volume-level-0.svg";
     button.disabled = true; 
   }
   sound.volume = vol/100; //set volume percent of 100
