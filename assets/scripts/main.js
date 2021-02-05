@@ -77,15 +77,15 @@ button.addEventListener("click", function(evt) {
   evt.preventDefault();
   
   if(airHornSound.checked) {
-    sound.src = "./assets/media/audio/air-horn.mp3");
+    sound.src = "./assets/media/audio/air-horn.mp3";
     sound.play();
   }
   else if(carHornSound.checked) {
-    sound.src = "./assets/media/audio/air-horn.mp3");
+    sound.src = "./assets/media/audio/air-horn.mp3";
     sound.play();
   }
   else if(partyHornSound.checked) {
-    sound.src = "./assets/media/audio/air-horn.mp3");
+    sound.src = "./assets/media/audio/air-horn.mp3";
     sound.play();
   } 
 })
