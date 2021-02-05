@@ -84,7 +84,7 @@ button.addEventListener("click", function(evt) {
     sound.src = "./assets/media/audio/air-horn.mp3";
     sound.play();
   }
-  else if(partyHornSound.checked) {
+  else (partyHornSound.checked) {
     sound.src = "./assets/media/audio/air-horn.mp3";
     sound.play();
   } 
