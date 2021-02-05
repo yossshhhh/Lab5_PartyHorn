@@ -23,10 +23,12 @@ partyHornSound.addEventListener("click", function() {
 var volNum = document.getElementById("volume-number");
 var volImg = document.getElementById("volume-image");
 var button = document.getElementById("honk-button");
+var volSlider = document.getElementById("volume-slider");
 
 //update volume number
 volNum.addEventListener("change", function() {  
   let vol = volNum.value;
+  volSlider.value = vol;
   if(vol > 66) { //67-100
     volImg.src = "./assets/media/icons/volume-level-3.svg";
     button.disabled = false;
@@ -46,11 +48,10 @@ volNum.addEventListener("change", function() {
   sound.volume = vol/100; //set volume percent of 100
 })
 
-var volSlider = document.getElementById("volume-slider");
-
 //update volume slider
 volSlider.addEventListener("change", function() {
   let vol = volSlider.value;
+  volNum.value = vol;
   if(vol > 66) { //67-100
     volImg.src = "./assets/media/icons/volume-level-3.svg";
     button.disabled = false;
@@ -88,10 +89,7 @@ function toggleSound(evt) {
   }
 }
 
-var submit = document.getElementById("party-horn-form");
-play.addEventListener("submit", playSound);
-
-function playSound(evt) {
+button.addEventListener("click", function(evt) {
   evt.preventDefault();
   sound.play();
 }
