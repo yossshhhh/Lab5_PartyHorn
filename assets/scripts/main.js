@@ -46,6 +46,7 @@ volNum.addEventListener("change", function() {
   sound.volume = vol/100; //set volume percent of 100
 })
 
+
 var volSlider = document.getElementById("volume-slider");
 
 //update volume slider
@@ -70,6 +71,7 @@ volSlider.addEventListener("change", function() {
   sound.volume = vol/100; //set volume percent of 100
 })
 
+
 //update sound
 var audioSelect = document.getElementById("audio-seclection");
 var sound = document.getElementById("horn-sound");
@@ -78,13 +80,13 @@ audioSelect.addEventListener("change", toggleSound);
 function toggleSound(evt) {
   let currSound = evt.target;
   if(currSound.id = "radio-air-horn") {
-    sound = "./assets/media/audio/air-horn.mp3";
+    sound.src = "./assets/media/audio/air-horn.mp3";
   }
   if(currSound.id = "radio-car-horn") {
-    sound = "./assets/media/audio/radio-car-horn.mp3";
+    sound.src = "./assets/media/audio/radio-car-horn.mp3";
   }
   if(currSound.id = "radio-party-horn") {
-    sound = "./assets/media/audio/radio-party-horn.mp3";
+    sound.src = "./assets/media/audio/radio-party-horn.mp3";
   }
 }
 
