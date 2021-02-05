@@ -35,15 +35,15 @@ volNum.addEventListener("change", function() {
     button.disabled = false;
   }
   else if(vol > 33) { //34-66
-    volImg.src = "./assets/media/icons/volume-level-2.src";
+    volImg.src = "./assets/media/icons/volume-level-2.svg";
     button.disabled = false;
   }
   else if(vol > 0) { //1-33
-    volImg.src = "./assets/media/icons/volume-level-1.src";
+    volImg.src = "./assets/media/icons/volume-level-1.svg";
     button.disabled = false;
   }
   else { //0
-    volImg.src = "./assets/media/icons/volume-level-0-.src";
+    volImg.src = "./assets/media/icons/volume-level-0-.svg";
     button.disabled = true; 
   }
   sound.volume = vol/100; //set volume percent of 100
