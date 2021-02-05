@@ -22,7 +22,9 @@ function updateImageAndVol(vol) {
   if(vol < 0) {
     vol = 0;
   }
-  vol = vol % 100; //adjust in case input is greater than 100
+  if(vol > 100) {
+    vol = 100;
+  }
   sound.volume = vol/100; //set volume percent of 100
   
   if(vol > 66) { //67-100
@@ -47,8 +49,8 @@ function updateSlider(evt) { //update volume and slider based on input
   if (vol < 0) {
     vol = 0;
   }
-  else {
-  vol = vol % 100; //adjust in case greater than 100
+  else if (vol > 100)
+    vol = 100; //adjust in case greater than 100
   }
   volNum.value = vol;
   volSlider = vol;
