@@ -22,7 +22,7 @@ partyHornSound.addEventListener("click", function() {
 
 var volNum = document.getElementById("volume-number");
 var volImg = document.getElementById("volume-image");
-var button = document.getElementById("honk-button");
+var button = document.getElementById("honk-btn");
 var volSlider = document.getElementById("volume-slider");
 var sound = document.getElementById("horn-sound");
 
